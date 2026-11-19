@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Лабораторная ОГЭ: плотность вещества</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="script.js"></script>
+</head><body>
+<header><h1 id="ttl">Комплект №1 · Лабораторная работа №1 · Плотность вещества</h1>
+<div class="tools"><button class="pill" id="var" data-tip="Выбрать вариант работы">Вариант 1 ▾</button>
+<button class="ib tb" id="undo" data-tip="Отменить (Ctrl+Z)">↶</button>
+<button class="ib tb" id="redo" data-tip="Повторить (Ctrl+Y)">↷</button>
+<button class="ib tb" id="rst" data-tip="Начать заново (Alt+R)">⟲</button>
+<button class="ib tb" id="snd" data-tip="Звук (Alt+M)"></button>
+<button class="ib tb" id="hnt" data-tip="Подсказка (Alt+H)"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-4 10.5c.8.8 1 1.5 1 2.5h6c0-1 .2-1.7 1-2.5A6 6 0 0 0 12 3z"/></svg></button>
+</div></header>
+<div id="shell">
+<nav id="nav" class="card"><div class="sk"><h2>Работы</h2><div class="list">
+<button class="lab on" data-lab="1"><b>Работа №1</b><small>Измерение плотности вещества</small></button>
+<button class="lab" data-lab="2"><b>Работа №2</b><small>Измерение архимедовой силы</small></button>
+<button class="lab" data-lab="3"><b>Работа №3</b><small>Зависимость архимедовой силы от объёма погружённой части</small></button>
+</div></div></nav>
+<div id="col">
+<main>
+<section id="c1">
+<svg id="st" viewBox="0 0 1000 682" role="img" aria-label="Лабораторный стол с комплектом оборудования">
+<defs>
+<linearGradient id="gGlass" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity=".6"/><stop offset=".25" stop-color="#cfe6ee" stop-opacity=".2"/><stop offset=".8" stop-color="#cfe6ee" stop-opacity=".25"/><stop offset="1" stop-color="#fff" stop-opacity=".5"/></linearGradient>
+<linearGradient id="gSteel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e3e5e8"/><stop offset="1" stop-color="#a9adb3"/></linearGradient>
+<linearGradient id="gTeal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9fe0e6"/><stop offset="1" stop-color="#4fb0bb"/></linearGradient>
+<linearGradient id="gYel" x1="0" x2="1"><stop offset="0" stop-color="#ffe85c"/><stop offset="1" stop-color="#d9b300"/></linearGradient>
+<linearGradient id="gBlue" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3d8be0"/><stop offset="1" stop-color="#1b56a3"/></linearGradient>
+<linearGradient id="gDesk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e2d3b3"/><stop offset="1" stop-color="#c7b48b"/></linearGradient>
+<radialGradient id="gD1" cx=".35" cy=".3"><stop offset="0" stop-color="#fff2c0"/><stop offset="1" stop-color="#cfa94a"/></radialGradient>
+<radialGradient id="gD2" cx=".35" cy=".3"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#b4bec6"/></radialGradient>
+<radialGradient id="gD3" cx=".35" cy=".3"><stop offset="0" stop-color="#d8dde3"/><stop offset="1" stop-color="#7d8792"/></radialGradient>
+<filter id="foam" x="0" y="0" width="1" height="1"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2"/><feColorMatrix type="matrix" values="0 0 0 0 .2 0 0 0 0 .2 0 0 0 0 .2 0 0 0 1.1 -.1"/></filter>
+<filter id="slot" x="-10%" y="-10%" width="120%" height="120%"><feMorphology in="SourceAlpha" operator="dilate" radius="2" result="d"/><feFlood flood-color="#454545"/><feComposite in2="d" operator="in" result="edge"/><feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 .02 0 0 0 0 .02 0 0 0 0 .02 0 0 0 14 0" result="sil"/><feMerge><feMergeNode in="edge"/><feMergeNode in="sil"/></feMerge></filter>
+<pattern id="wood" width="1000" height="46" patternUnits="userSpaceOnUse"><line y1="9" y2="9" x2="1000" stroke="#a8946a" stroke-opacity=".35"/><line y1="22" y2="22" x2="1000" stroke="#fff" stroke-opacity=".25"/><line y1="38" y2="38" x2="1000" stroke="#a8946a" stroke-opacity=".25"/></pattern>
+<linearGradient id="gS1" x1="0" x2="1"><stop offset="0" stop-color="#f3dc92"/><stop offset=".5" stop-color="#c9a244"/><stop offset="1" stop-color="#9a7a28"/></linearGradient>
+<linearGradient id="gS2" x1="0" x2="1"><stop offset="0" stop-color="#fff"/><stop offset=".5" stop-color="#c3ccd3"/><stop offset="1" stop-color="#8f99a2"/></linearGradient>
+<linearGradient id="gS3" x1="0" x2="1"><stop offset="0" stop-color="#c9d0d8"/><stop offset=".5" stop-color="#7d8792"/><stop offset="1" stop-color="#555d66"/></linearGradient>
+<linearGradient id="gWall" x1="0" x2="1"><stop offset="0" stop-color="#4a63e0"/><stop offset=".45" stop-color="#8aa0ff"/><stop offset="1" stop-color="#2a3fa8"/></linearGradient>
+<radialGradient id="gHole" cx=".5" cy=".3" r=".8"><stop offset="0" stop-color="#25328f"/><stop offset="1" stop-color="#090d33"/></radialGradient>
+<linearGradient id="gGlassC" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity=".3"/><stop offset=".25" stop-color="#cfe6ee" stop-opacity=".03"/><stop offset=".8" stop-color="#cfe6ee" stop-opacity=".05"/><stop offset="1" stop-color="#fff" stop-opacity=".26"/></linearGradient>
+<filter id="glow" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="1.1" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="bl3" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="5"/></filter>
+<clipPath id="fc"><rect x="28" y="28" width="600" height="442" rx="8"/></clipPath>
+<linearGradient id="gBody" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eceef0"/><stop offset="1" stop-color="#c2c7cc"/></linearGradient>
+<linearGradient id="gBtn" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b9bec3"/><stop offset="1" stop-color="#9aa0a5"/></linearGradient>
+<linearGradient id="gPlat" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c4d3e4"/><stop offset=".5" stop-color="#a8bcd5"/><stop offset="1" stop-color="#bccce1"/></linearGradient>
+<linearGradient id="gLcdB" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a63e8"/><stop offset="1" stop-color="#4f93ff"/></linearGradient>
+<linearGradient id="gPan" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b9c4c8"/><stop offset="1" stop-color="#d3dbde"/></linearGradient>
+<linearGradient id="gThr" x1="0" x2="1"><stop offset="0" stop-color="#d9cfb6"/><stop offset=".4" stop-color="#faf5e8"/><stop offset="1" stop-color="#cfc4a8"/></linearGradient>
+<filter id="bl" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="8"/></filter>
+<filter id="bl2" x="-30%" y="-100%" width="160%" height="300%"><feGaussianBlur stdDeviation="3.5"/></filter>
+<clipPath id="cA"><rect x="-28" y="-190" width="10" height="365"/></clipPath><clipPath id="cB"><rect x="-18" y="-190" width="36" height="365"/></clipPath><clipPath id="cC"><rect x="18" y="-190" width="10" height="365"/></clipPath>
+<g id="rf"><rect width="1000" height="682" fill="#d8c8a4"/><rect x="8" y="8" width="640" height="482" rx="22" fill="#2b6fc0"/><rect x="28" y="28" width="600" height="442" rx="8" fill="#242424"/></g>
+</defs>
+<rect width="1000" height="682" fill="url(#gDesk)"/><rect width="1000" height="682" fill="url(#wood)"/>
+<rect x="14" y="24" width="640" height="482" rx="22" fill="#000" opacity=".3" filter="url(#bl)"/>
+<rect x="8" y="8" width="640" height="482" rx="22" fill="url(#gBlue)" stroke="#164887" stroke-width="3"/>
+<rect x="14" y="14" width="628" height="470" rx="18" fill="none" stroke="#7fb4f2" stroke-opacity=".5" stroke-width="2"/>
+<rect x="28" y="28" width="600" height="442" rx="8" fill="#1d1d1d"/><rect x="28" y="28" width="600" height="442" rx="8" filter="url(#foam)" opacity=".8"/>
+<rect x="23" y="23" width="610" height="452" rx="12" fill="none" stroke="#12396f" stroke-width="8" opacity=".85"/>
+<g clip-path="url(#fc)"><rect x="28" y="28" width="600" height="442" rx="8" fill="none" stroke="#000" stroke-width="18" opacity=".7" filter="url(#bl3)"/></g>
+<rect x="27" y="27" width="602" height="444" rx="9" fill="none" stroke="#000" stroke-opacity=".55" stroke-width="1.5"/>
+<g id="slots"></g><g id="shadows"></g>
+</svg>
+<div id="foot"><span class="hint" id="fh"></span><div class="fr"><button class="ib sm" id="hp" data-tip="Справка по управлению">?</button><div class="zm"><button class="ib sm" id="zo" data-tip="Отдалить">−</button><button class="ib sm" id="zr" data-tip="Весь стол">⤢</button><button class="ib sm" id="zi" data-tip="Приблизить">+</button></div></div></div>
+<div id="bar"></div><div id="hintbox" hidden></div><div id="toast"></div>
+</section>
+<div id="c2">
+<div class="card"><h2>Задание</h2><div class="small"><span id="tt"></span><div class="hint ln" id="te">Погрешность массы ±0,1 г, объёма ±2 см³</div><div class="hint ln">Предметы перетаскиваются мышью или пальцем, кнопки на весах нажимаются щелчком</div><div class="hint ln">Правая кнопка мыши открывает меню действий</div></div></div>
+<div class="card grow"><h2 id="lt">Лупа: уровень воды</h2><div id="lp"></div></div>
+</div>
+<aside id="c3"><div class="card"><h2>Черновик</h2>
+<div id="dr1">
+<label><span data-k="m,\ \text{г}"></span><input id="m" inputmode="decimal"></label>
+<label><span data-k="V_1,\ \text{мл}"></span><input id="v1" inputmode="decimal"></label>
+<label><span data-k="V_2,\ \text{мл}"></span><input id="v2" inputmode="decimal"></label>
+<div class="calc" id="calc"></div>
+<label><span data-k="\rho,\ \text{г/см}^3"></span><input id="r" inputmode="decimal"></label>
+</div>
+<div id="dr2" hidden>
+<label><span data-k="P_1,\ \text{Н}"></span><input id="p1" inputmode="decimal"></label>
+<label><span data-k="P_2,\ \text{Н}"></span><input id="p2" inputmode="decimal"></label>
+<label>Формула<select id="fs"><option value="">выберите</option><option value="a">F выт = P₁ − P₂</option><option value="b">F выт = P₂ − P₁</option><option value="c">F выт = P₁ + P₂</option><option value="d">F выт = P₁ · P₂</option></select></label>
+<div class="calc" id="calc2"></div>
+<label><span data-k="F_{\text{выт}},\ \text{Н}"></span><input id="fa" inputmode="decimal"></label>
+</div>
+<div id="dr3" hidden>
+<label><span data-k="P_1,\ \text{Н}"></span><input id="q1" inputmode="decimal"></label>
+<table class="tb3"><thead><tr><th data-k="V_{\text{погр}}"></th><th data-k="P_2,\ \text{Н}"></th><th data-k="F_{\text{выт}},\ \text{Н}"></th></tr></thead><tbody>
+<tr><td data-k="\dfrac{1}{4}"></td><td><input id="qa" inputmode="decimal"></td><td><input id="ra" inputmode="decimal"></td></tr>
+<tr><td data-k="\dfrac{1}{2}"></td><td><input id="qb" inputmode="decimal"></td><td><input id="rb" inputmode="decimal"></td></tr>
+<tr><td data-k="1"></td><td><input id="qc" inputmode="decimal"></td><td><input id="rc" inputmode="decimal"></td></tr></tbody></table>
+<label>Формула<select id="qs"><option value="">выберите</option><option value="a">F выт = P₁ − P₂</option><option value="b">F выт = P₂ − P₁</option><option value="c">F выт = P₁ + P₂</option></select></label>
+<div class="calc" id="calc3"></div>
+<label class="col">Вывод<select id="qn"><option value="">выберите</option><option value="a">Чем больше объём погружённой части, тем больше выталкивающая сила</option><option value="b">Чем больше объём погружённой части, тем меньше выталкивающая сила</option><option value="c">Выталкивающая сила не зависит от объёма погружённой части</option></select></label>
+</div>
+<button class="pri" id="chk" style="width:100%;margin-top:8px">Проверить</button>
+<div id="res"></div></div></aside>
+</main>
+<footer>
+<div>Разработано специально для частной библиотеки</div>
+<div><a class="big" href="https://t.me/nauka_explain" target="_blank" rel="noopener">Поясни за науку</a></div>
+<div>При использовании инструмента вы соглашаетесь с <a href="#" id="tos"><em>правилами пользования</em></a></div>
+</footer>
+</div>
+</div>
+<div id="help" hidden><div class="card"><h2>Управление</h2>
+<div class="small"><b>Предметы</b><div class="ln">Перетаскивание — левая кнопка мыши или палец</div><div class="ln">Правая кнопка мыши по предмету — меню действий: протереть, снять или привязать нитку, разобрать, положить в кейс</div><div class="ln">Кнопки на весах нажимаются щелчком</div>
+<b class="ln" style="display:block;margin-top:10px">Рабочая область</b><div class="ln">Колесо мыши — приблизить и отдалить</div><div class="ln">Перетаскивание пустого места — сдвиг</div><div class="ln">Кнопки − ⤢ + под столом — масштаб и возврат ко всему столу</div>
+<b class="ln" style="display:block;margin-top:10px">Горячие клавиши</b>
+<div class="ln"><kbd>Ctrl</kbd> + <kbd>Z</kbd> — отменить</div><div class="ln"><kbd>Ctrl</kbd> + <kbd>Y</kbd> или <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Z</kbd> — повторить</div><div class="ln"><kbd>Alt</kbd> + <kbd>R</kbd> — начать заново</div><div class="ln"><kbd>Alt</kbd> + <kbd>H</kbd> — подсказка</div><div class="ln"><kbd>Alt</kbd> + <kbd>M</kbd> — включить и выключить звук</div><div class="ln"><kbd>Esc</kbd> — закрыть меню или это окно</div></div>
+<button class="pri" id="hx" style="margin-top:14px">Понятно</button></div></div><div id="cm" hidden></div><div id="tip" hidden></div>
+<div id="tosm" hidden><div class="card"><h2>Правила пользования</h2>
+<div class="small tos">
+<b>Назначение</b><p>Инструмент представляет собой учебный симулятор лабораторных работ ОГЭ по физике. Результаты в нём получены на математической модели и не заменяют реальный эксперимент.</p>
+<b>Правила использования</b><p>Инструмент можно использовать бесплатно для личного учебного применения и на занятиях. Запрещается копировать и распространять код, графику, звуки и тексты инструмента, а также выдавать их за собственные, использовать инструмент в коммерческих целях, автоматически собирать его содержимое и применять его способами, нарушающими закон.</p>
+<b>Защита авторских прав</b><p>Код, графическое оформление, анимации, звуковые эффекты и интерфейс инструмента являются объектами авторского права и принадлежат правообладателю: частной библиотеке «Поясни за науку». Любое использование за пределами личного учебного применения допускается только с письменного разрешения правообладателя. Формулировки заданий воспроизводятся в учебных целях, права на исходные материалы принадлежат их правообладателям.</p>
+<b>Обработка данных</b><p>Инструмент работает в вашем браузере. Введённые значения, положение предметов и результаты проверки не передаются на сервер и не сохраняются. Локально в браузере запоминается только настройка звука. Персональные данные инструмент не собирает и не использует сторонние сервисы.</p>
+<b>Отказ от обязательств</b><p>Инструмент предоставляется «как есть», без гарантий точности, бесперебойной работы и полного соответствия реальному экзамену. Правообладатель не несёт ответственности за результаты экзаменов, возможный ущерб и последствия использования инструмента. Правила могут быть изменены без предварительного уведомления.</p>
+</div><button class="pri" id="tx" style="margin-top:12px">Закрыть</button></div></div>
+</body></html>
