@@ -66,37 +66,36 @@
 <rect x="27" y="27" width="602" height="444" rx="9" fill="none" stroke="#000" stroke-opacity=".55" stroke-width="1.5"/>
 <g id="slots"></g><g id="shadows"></g>
 </svg>
-<div id="foot"><span class="hint" id="fh"></span><div class="fr"><button class="ib sm" id="hp" data-tip="Справка по управлению">?</button><div class="zm"><button class="ib sm" id="zo" data-tip="Отдалить">−</button><button class="ib sm" id="zr" data-tip="Весь стол">⤢</button><button class="ib sm" id="zi" data-tip="Приблизить">+</button></div></div></div>
+<div id="foot"><span class="hint" id="fh"></span><div class="fr"><button class="ib sm" id="hp" data-tip="Справка по управлению">?</button><div class="zm"><button class="ib sm" id="zo" data-tip="Отдалить"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg></button><button class="ib sm" id="zr" data-tip="Весь стол"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button><button class="ib sm" id="zi" data-tip="Приблизить"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></button></div></div></div>
 <div id="bar"></div><div id="hintbox" hidden></div><div id="toast"></div>
 </section>
 <div id="c2">
-<div class="card"><h2>Задание</h2><div class="small"><span id="tt"></span><div class="hint ln" id="te">Погрешность массы ±0,1 г, объёма ±2 см³</div><div class="hint ln">Предметы перетаскиваются мышью или пальцем, кнопки на весах нажимаются щелчком</div><div class="hint ln">Правая кнопка мыши открывает меню действий</div></div></div>
+<div class="card"><h2>Задание</h2><div class="small"><span id="tt"></span><div class="hint ln" id="te"></div><div class="ln" id="tb"></div></div></div>
 <div class="card grow"><h2 id="lt">Лупа: уровень воды</h2><div id="lp"></div></div>
 </div>
-<aside id="c3"><div class="card"><h2>Черновик</h2>
+<aside id="c3"><div class="card"><h2>Измерения</h2>
 <div id="dr1">
-<label><span data-k="m,\ \text{г}"></span><input id="m" inputmode="decimal"></label>
+<label><span data-k="m,\ \text{г}"></span><span class="pm"><input id="m" inputmode="decimal"><i>±</i><input id="dm" inputmode="decimal"></span></label>
 <label><span data-k="V_1,\ \text{мл}"></span><input id="v1" inputmode="decimal"></label>
 <label><span data-k="V_2,\ \text{мл}"></span><input id="v2" inputmode="decimal"></label>
-<div class="calc" id="calc"></div>
+<label><span data-k="V,\ \text{см}^3"></span><span class="pm"><input id="vv" inputmode="decimal"><i>±</i><input id="dv" inputmode="decimal"></span></label>
 <label><span data-k="\rho,\ \text{г/см}^3"></span><input id="r" inputmode="decimal"></label>
 </div>
 <div id="dr2" hidden>
-<label><span data-k="P_1,\ \text{Н}"></span><input id="p1" inputmode="decimal"></label>
-<label><span data-k="P_2,\ \text{Н}"></span><input id="p2" inputmode="decimal"></label>
-<label>Формула<select id="fs"><option value="">выберите</option><option value="a">F выт = P₁ − P₂</option><option value="b">F выт = P₂ − P₁</option><option value="c">F выт = P₁ + P₂</option><option value="d">F выт = P₁ · P₂</option></select></label>
-<div class="calc" id="calc2"></div>
+<label><span data-k="P_1,\ \text{Н}"></span><span class="pm"><input id="p1" inputmode="decimal"><i>±</i><input id="dp1" inputmode="decimal"></span></label>
+<label><span data-k="P_2,\ \text{Н}"></span><span class="pm"><input id="p2" inputmode="decimal"><i>±</i><input id="dp2" inputmode="decimal"></span></label>
 <label><span data-k="F_{\text{выт}},\ \text{Н}"></span><input id="fa" inputmode="decimal"></label>
 </div>
 <div id="dr3" hidden>
-<label><span data-k="P_1,\ \text{Н}"></span><input id="q1" inputmode="decimal"></label>
+<label><span data-k="P_1,\ \text{Н}"></span><span class="pm"><input id="q1" inputmode="decimal"><i>±</i><input id="eq1" inputmode="decimal"></span></label>
 <table class="tb3"><thead><tr><th data-k="V_{\text{погр}}"></th><th data-k="P_2,\ \text{Н}"></th><th data-k="F_{\text{выт}},\ \text{Н}"></th></tr></thead><tbody>
-<tr><td data-k="\dfrac{1}{4}"></td><td><input id="qa" inputmode="decimal"></td><td><input id="ra" inputmode="decimal"></td></tr>
-<tr><td data-k="\dfrac{1}{2}"></td><td><input id="qb" inputmode="decimal"></td><td><input id="rb" inputmode="decimal"></td></tr>
-<tr><td data-k="1"></td><td><input id="qc" inputmode="decimal"></td><td><input id="rc" inputmode="decimal"></td></tr></tbody></table>
-<label>Формула<select id="qs"><option value="">выберите</option><option value="a">F выт = P₁ − P₂</option><option value="b">F выт = P₂ − P₁</option><option value="c">F выт = P₁ + P₂</option></select></label>
-<div class="calc" id="calc3"></div>
-<label class="col">Вывод<select id="qn"><option value="">выберите</option><option value="a">Чем больше объём погружённой части, тем больше выталкивающая сила</option><option value="b">Чем больше объём погружённой части, тем меньше выталкивающая сила</option><option value="c">Выталкивающая сила не зависит от объёма погружённой части</option></select></label>
+<tr><td data-k="\dfrac{1}{4}"></td><td><span class="pm"><input id="qa" inputmode="decimal"><i>±</i><input id="eqa" inputmode="decimal"></span></td><td><span class="pm"><input id="ra" inputmode="decimal"><i>±</i><input id="era" inputmode="decimal"></span></td></tr>
+<tr><td data-k="\dfrac{1}{2}"></td><td><span class="pm"><input id="qb" inputmode="decimal"><i>±</i><input id="eqb" inputmode="decimal"></span></td><td><span class="pm"><input id="rb" inputmode="decimal"><i>±</i><input id="erb" inputmode="decimal"></span></td></tr>
+<tr><td data-k="1"></td><td><span class="pm"><input id="qc" inputmode="decimal"><i>±</i><input id="eqc" inputmode="decimal"></span></td><td><span class="pm"><input id="rc" inputmode="decimal"><i>±</i><input id="erc" inputmode="decimal"></span></td></tr></tbody></table>
+<div class="col"><div class="lbl">Вывод</div><input type="hidden" id="qn"><div class="opts" id="qno">
+<button type="button" class="opt" data-v="a">Чем больше объём погружённой части, тем больше выталкивающая сила</button>
+<button type="button" class="opt" data-v="b">Чем больше объём погружённой части, тем меньше выталкивающая сила</button>
+<button type="button" class="opt" data-v="c">Выталкивающая сила не зависит от объёма погружённой части</button></div></div>
 </div>
 <button class="pri" id="chk" style="width:100%;margin-top:8px">Проверить</button>
 <div id="res"></div></div></aside>
@@ -109,11 +108,12 @@
 </div>
 </div>
 <div id="help" hidden><div class="card"><h2>Управление</h2>
-<div class="small"><b>Предметы</b><div class="ln">Перетаскивание — левая кнопка мыши или палец</div><div class="ln">Правая кнопка мыши по предмету — меню действий: протереть, снять или привязать нитку, разобрать, положить в кейс</div><div class="ln">Кнопки на весах нажимаются щелчком</div>
+<div class="small" id="helpbody"><b>Предметы</b><div class="ln">Перетаскивание — левая кнопка мыши или палец</div><div class="ln">Правая кнопка мыши по предмету — меню действий: протереть, снять или привязать нитку, разобрать, положить в кейс</div><div class="ln">Кнопки на весах нажимаются щелчком</div>
 <b class="ln" style="display:block;margin-top:10px">Рабочая область</b><div class="ln">Колесо мыши — приблизить и отдалить</div><div class="ln">Перетаскивание пустого места — сдвиг</div><div class="ln">Кнопки − ⤢ + под столом — масштаб и возврат ко всему столу</div>
 <b class="ln" style="display:block;margin-top:10px">Горячие клавиши</b>
 <div class="ln"><kbd>Ctrl</kbd> + <kbd>Z</kbd> — отменить</div><div class="ln"><kbd>Ctrl</kbd> + <kbd>Y</kbd> или <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Z</kbd> — повторить</div><div class="ln"><kbd>Alt</kbd> + <kbd>R</kbd> — начать заново</div><div class="ln"><kbd>Alt</kbd> + <kbd>H</kbd> — подсказка</div><div class="ln"><kbd>Alt</kbd> + <kbd>M</kbd> — включить и выключить звук</div><div class="ln"><kbd>Esc</kbd> — закрыть меню или это окно</div></div>
 <button class="pri" id="hx" style="margin-top:14px">Понятно</button></div></div><div id="cm" hidden></div><div id="tip" hidden></div>
+<div id="varm" hidden><div class="vwrap"><div class="vrow"><div class="card vpick"><h2 id="vt">Выбор исследуемого тела</h2><div class="small" id="vs"></div><div class="vcards" id="vc"></div></div><div class="card vhelp"><h2>Управление</h2><div class="small" id="vh"></div></div></div><div class="vnote">Позже вариант можно сменить кнопкой «Вариант» в шапке<br>Справку по управлению можно прочитать по нажатию на знак вопроса</div></div></div>
 <div id="tosm" hidden><div class="card"><h2>Правила пользования</h2>
 <div class="small tos">
 <b>Назначение</b><p>Инструмент представляет собой учебный симулятор лабораторных работ ОГЭ по физике. Результаты в нём получены на математической модели и не заменяют реальный эксперимент.</p>
@@ -121,5 +121,6 @@
 <b>Защита авторских прав</b><p>Код, графическое оформление, анимации, звуковые эффекты и интерфейс инструмента являются объектами авторского права и принадлежат правообладателю: частной библиотеке «Поясни за науку». Любое использование за пределами личного учебного применения допускается только с письменного разрешения правообладателя. Формулировки заданий воспроизводятся в учебных целях, права на исходные материалы принадлежат их правообладателям.</p>
 <b>Обработка данных</b><p>Инструмент работает в вашем браузере. Введённые значения, положение предметов и результаты проверки не передаются на сервер и не сохраняются. Локально в браузере запоминается только настройка звука. Персональные данные инструмент не собирает и не использует сторонние сервисы.</p>
 <b>Отказ от обязательств</b><p>Инструмент предоставляется «как есть», без гарантий точности, бесперебойной работы и полного соответствия реальному экзамену. Правообладатель не несёт ответственности за результаты экзаменов, возможный ущерб и последствия использования инструмента. Правила могут быть изменены без предварительного уведомления.</p>
+<p>По всем вопросам ищите информацию в телеграм-канале <a href="https://t.me/nauka_explain" target="_blank" rel="noopener">Поясни за науку</a></p>
 </div><button class="pri" id="tx" style="margin-top:12px">Закрыть</button></div></div>
 </body></html>
